@@ -34,7 +34,6 @@ def twitter_data(name):
     json_responce = responce.json()
 
     return json_responce["users"]
-# pprint.pprint(twitter_data("@500"))
 
 def get_location_and_name(users):
     list_of_location = []
@@ -61,7 +60,5 @@ def folium_map(lst):
             print(location)
     followers_map.add_child(fg)
 
-    # followers_map.save("templates/follower_location.html")
     return followers_map
-    
-# folium_map(get_location_and_name(twitter_data('@500')))
+
