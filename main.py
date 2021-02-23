@@ -13,8 +13,8 @@ def register():
         folium_map(get_location_and_name(twitter_data(request.form.get("domain")))) == "failure" :
         return render_template("failure.html")
     else:
-        folium_map(get_location_and_name(twitter_data(request.form.get("domain"))))
-    return render_template("follower_location.html")
+        followers = folium_map(get_location_and_name(twitter_data(request.form.get("domain"))))
+    return followers._repr_html_()
 
 if __name__ == "__main__":
     app.run(debug = True)

@@ -61,6 +61,7 @@ def folium_map(lst):
             print(location)
     followers_map.add_child(fg)
 
-    followers_map.save("templates/follower_location.html")
+    # followers_map.save("templates/follower_location.html")
+    return followers_map
     
 # folium_map(get_location_and_name(twitter_data('@500')))
