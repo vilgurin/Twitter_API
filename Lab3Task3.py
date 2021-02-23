@@ -55,9 +55,9 @@ def folium_map(lst):
             fg.add_child(folium.Marker(location=((location.latitude,location.longitude)),
                                     popup = loc[0]))
         except AttributeError:
-            print(location)
+            pass
         except  GeocoderUnavailable:
-            print(location)
+            pass
     followers_map.add_child(fg)
 
     return followers_map
